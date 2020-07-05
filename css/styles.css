@@ -17,6 +17,7 @@ time, mark, audio, video {
   vertical-align: baseline;
   list-style: none;
 }
+
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
@@ -25,17 +26,17 @@ footer, header, hgroup, menu, nav, section {
 
 @font-face {
   font-family: 'GmarketSans';
-  src: url(fonts/GmarketSansTTFLight.ttf) format('truetype');
+  src: url(/fonts/GmarketSansTTFLight.ttf) format('truetype');
 }
 
 @font-face {
   font-family: 'GmarketSansBold';
-  src: url(fonts/GmarketSansTTFBold.ttf) format('truetype');
+  src: url(/fonts/GmarketSansTTFBold.ttf) format('truetype');
 }
 
 @font-face {
   font-family: 'NanumSquareOTF';
-  src: url(fonts/NanumSquareLight.ttf) format('truetype');
+  src: url(/fonts/NanumSquareLight.ttf) format('truetype');
 }
 
 
@@ -226,13 +227,13 @@ footer, header, hgroup, menu, nav, section {
   border: 0.711111px solid #2C902A;
 }
 
-.team .teamTitle {
+.team .teamTitle1 {
   position: absolute;
-  width: 316px;
+  width: 130px; /* 316px */
   height: 53px;
   left: calc(50% - 316px/2 - 325.56px);
   top: 2689.42px;
-  font-family: Black Han Sans;
+  font-family: GmarketSansBold;
   font-style: normal;
   font-weight: normal;
   font-size: 42px;
@@ -240,6 +241,54 @@ footer, header, hgroup, menu, nav, section {
   /* identical to box height */
   letter-spacing: -0.711111px;
   color: #E15746;
+}
+
+.team .teamTitle2 {
+  position: absolute;
+  width: 100pxpx; /* 316px */
+  height: 53px;
+  left: calc(50% - 316px/2 - 195px);
+  top: 2689.42px;
+  font-family: GmarketSansBold;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 42px;
+  line-height: 52px;
+  /* identical to box height */
+  letter-spacing: -0.711111px;
+  color: #56BC9D;
+}
+
+.team .teamTitle3 {
+  position: absolute;
+  width: 100pxpx; /* 316px */
+  height: 53px;
+  left: calc(50% - 316px/2 - 105px);
+  top: 2689.42px;
+  font-family: GmarketSansBold;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 42px;
+  line-height: 52px;
+  /* identical to box height */
+  letter-spacing: -0.711111px;
+  color: #9757B2;
+}
+
+.teamTitleSmall {
+  position: absolute;
+  width: 70px; /* 48px */
+  height: 12px;
+  left: calc(50% - 48px/2 - 80px); /* calc(50% - 48px/2 - 123.2px) */
+  top: 2707.91px;
+  font-family: NanumSquareOTF;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 11px;
+  line-height: 12px;
+  letter-spacing: -0.284444px;
+  color: #000000;
+  opacity: 0.5;
 }
 
 .team .teamDescriptionLeft {
@@ -274,12 +323,12 @@ footer, header, hgroup, menu, nav, section {
   color: #414F64;
 }
 
-.team .teamDescriptionMiddle {
+.team .logo {
   position: absolute;
   width: 187.73px;
-  height: 41.24px;
+  height: 80px; /* 41.24px */
   left: calc(50% - 187.73px/2 - 109.51px);
-  top: 2768.36px;
+  top: 2750px; /* 2768.36px */
 }
 
 .team .teamDescriptionBottom {
@@ -298,10 +347,9 @@ footer, header, hgroup, menu, nav, section {
   color: #414F64;
 }
 
-.teamMember1 .memberName {
-  display: inline;
+.teamMember1 .memberNameTop {
   position: absolute;
-  width: 81px;
+  width: 100px; /* 81px */
   height: 25px;
   left: calc(50% - 81px/2 - 443.06px);
   top: 2934.76px;
@@ -315,7 +363,7 @@ footer, header, hgroup, menu, nav, section {
   color: #414F64;
 }
 
-.teamMember1 .memberDescription {
+.teamMember1 .memberDescriptionTop {
   position: absolute;
   width: 185px;
   height: 50px;
@@ -331,3 +379,189 @@ footer, header, hgroup, menu, nav, section {
   color: #414F64;
 }
 
+.teamMember1 .memberNameBottom {
+  position: absolute;
+  width: 100px; /* 81px */
+  height: 25px;
+  left: calc(50% - 81px/2 - 443.06px);
+  top: 3079.11px;
+  font-family: NanumSquareOTF;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 17px;
+  line-height: 148.5%;
+  /* or 25px */
+  letter-spacing: -0.284444px;
+  color: #414F64;
+}
+
+.teamMember1 .memberDescriptionBottom {
+  position: absolute;
+  width: 306px;
+  height: 50px;
+  left: calc(50% - 306px/2 - 330.56px);
+  top: 3116.8px;
+  font-family: NanumSquareOTF;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 17px;
+  line-height: 148.5%;
+  /* or 25px */
+  letter-spacing: -0.284444px;
+  color: #414F64;
+}
+
+.teamMember2 .memberNameTop {
+  position: absolute;
+  width: 100px; /* 81px */
+  height: 25px;
+  left: calc(50% - 82px/2 - 110.47px);
+  top: 2934.76px;
+  font-family: NanumSquareOTF;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 17px;
+  line-height: 148.5%;
+  /* or 25px */
+  letter-spacing: -0.284444px;
+  color: #414F64;
+}
+
+.teamMember2 .memberDescrpitionTop {
+  position: absolute;
+  width: 166px;
+  height: 50px;
+  left: calc(50% - 166px/2 - 68.47px);
+  top: 2972.44px;
+  font-family: NanumSquareOTF;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 17px;
+  line-height: 148.5%;
+  /* or 25px */
+  letter-spacing: -0.284444px;
+  color: #414F64;
+}
+
+.teamMember2 .memberNameBottom {
+  position: absolute;
+  width: 100px; /* 81px */
+  height: 25px;
+  left: calc(50% - 81px/2 - 110.97px);
+  top: 3079.11px;
+  font-family: NanumSquareOTF;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 17px;
+  line-height: 148.5%;
+  /* or 25px */
+  letter-spacing: -0.284444px;
+  color: #414F64;
+}
+
+.teamMember2 .memberDescriptionBottom {
+  position: absolute;
+  width: 212px;
+  height: 50px;
+  left: calc(50% - 212px/2 - 45.47px);
+  top: 3116.8px;
+  font-family: NanumSquareOTF;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 17px;
+  line-height: 148.5%;
+  /* or 25px */
+  letter-spacing: -0.284444px;
+  color: #414F64;
+}
+
+.teamMember3 .memberNameTop {
+  position: absolute;
+  width: 100px; /* 81px */
+  height: 25px;
+  left: calc(50% - 81px/2 + 221.12px);
+  top: 2934.76px;
+  font-family: NanumSquareOTF;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 17px;
+  line-height: 148.5%;
+  /* or 25px */
+  letter-spacing: -0.284444px;
+  color: #414F64;
+}
+
+.teamMember3 .memberDescriptionTop {
+  position: absolute;
+  width: 250px;
+  height: 50px;
+  left: calc(50% - 250px/2 + 305.62px);
+  top: 2972.44px;
+  font-family: NanumSquareOTF;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 17px;
+  line-height: 148.5%;
+  /* or 25px */
+  letter-spacing: -0.284444px;
+  color: #414F64;
+}
+
+.teamMember3 .memberNameBottom {
+  position: absolute;
+  width: 100px; /* 81px */
+  height: 25px;
+  left: calc(50% - 81px/2 + 221.12px);
+  top: 3079.11px;
+  font-family: NanumSquareOTF;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 17px;
+  line-height: 148.5%;
+  /* or 25px */
+  letter-spacing: -0.284444px;
+  color: #414F64;
+}
+
+.teamMember3 .memberDescriptionBottom {
+  position: absolute;
+  width: 181px;
+  height: 50px;
+  left: calc(50% - 181px/2 + 271.12px);
+  top: 3116.8px;
+  font-family: NanumSquareOTF;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 17px;
+  line-height: 148.5%;
+  /* or 25px */
+  letter-spacing: -0.284444px;
+  color: #414F64;
+}
+
+.team .bottomLine {
+  position: absolute;
+  width: 967.11px;
+  height: 0px;
+  left: calc(50% - 967.11px/2 + 0px);
+  top: 3291.73px;
+  opacity: 0.1;
+  border: 0.711111px solid #000000;
+}
+
+#companyInfo .address {
+  position: absolute;
+  width: 311px;
+  height: 16px;
+  left: calc(50% - 311px/2 - 328.06px);
+  top: 3417.6px;
+  padding-bottom: 70px;
+  font-family: NanumSquareOTF;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 11px;
+  line-height: 148.5%;
+  /* or 16px */
+  letter-spacing: -0.284444px;
+  color: #000000;
+}
