@@ -116,8 +116,17 @@ footer, header, hgroup, menu, nav, section {
   letter-spacing: -0.397633px;
   color: #2C902A;
 }
-
-.bottomLine {
+.bottomLine1 {
+  position: absolute;
+  width: 962.84px;
+  height: 0px;
+  left: calc(50% - 962.84px/2 - 2.13px);
+  top: 961.42px;
+  
+  opacity: 0.3;
+  border: 0.711111px solid #2C902A;
+}
+.bottomLine2 {
   position: absolute;
   width: 967.11px;
   height: 0px;
@@ -126,7 +135,16 @@ footer, header, hgroup, menu, nav, section {
   opacity: 0.3;
   border: 0.711111px solid #2C902A;
 }
-
+.bottomLine3 {
+  position: absolute;
+  width: 967.11px;
+  height: 0px;
+  left: calc(50% - 967.11px/2 + 0px);
+  top: 2563.56px;
+  
+  opacity: 0.3;
+  border: 0.711111px solid #2C902A;
+}
 .content {
   position: absolute;
   width: 898.13px; /* 898.13px */
@@ -205,4 +223,359 @@ footer, header, hgroup, menu, nav, section {
   line-height: 102.3%;
   /* or 151px */
   letter-spacing: -21.3333px;
+}
+.backGround1Font{
+  z-index: 1;
+  position: absolute;
+  width: 47.64px;
+  height: 14.22px;
+  left: calc(50% - 47.64px/2 + 21.04px);
+  top: 631.76px;
+  font-family: Gmarket Sans;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14.2222px;
+  line-height: 102.3%;
+  /* identical to box height, or 15px */
+  text-align: center;
+  letter-spacing: -0.711112px; 
+  color: #CDCDCD;
+  transform: rotate(-90deg);
+}
+.backGround1Rectangle{
+  position: absolute;
+  width: 40.53px;
+  height: 103.82px;
+  left: calc(50% - 40.53px/2 + 20.27px);
+  top: 585.96px;
+
+  background: #FFFFFF;
+  border: 0.711111px solid #CDCDCD;
+  box-sizing: border-box;
+}
+
+.backGround1Line{
+  position: absolute;
+  width: 1157px;
+  height: 0px;
+  left: calc(50% - 11.38px/2 - 552.90px);
+  top: 0px;
+  border: 0.711111px solid #CDCDCD;
+  transform: rotate(90deg);
+}
+.backGround1Ellipse{
+  position: absolute;
+  width: 11.38px;
+  height: 11.38px;
+  left: calc(50% - 11.38px/2 + 20.62px);
+  top: 580.27px;
+  border-radius: 50%;
+  background: #C4C4C4;
+}
+
+.backGround2Font{
+  z-index: 1;
+  position: absolute;
+  width: 44.52px;
+  height: 14.58px;
+  left: calc(50% - 44.52px/2 + 70.26px);
+  top: 320.29px;
+  
+  font-family: Gmarket Sans;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14.2222px;
+  line-height: 102.3%;
+  /* identical to box height, or 15px */
+  text-align: center;
+  letter-spacing: -0.711112px;
+  
+  color: #CDCDCD;
+  
+  transform: rotate(-90deg);
+}
+.backGround2Rectangle{
+  position: absolute;
+  width: 34.13px;
+  height: 72.53px;
+  left: calc(50% - 34.13px/2 + 70.4px);
+  top: 289.42px;
+  
+  background: #FFFFFF;
+  border: 0.711111px solid #CDCDCD;
+  box-sizing: border-box;
+}
+
+.backGround2Line{
+  position: absolute;
+  width: 568.71px;
+  height: 0px;
+  left: calc(50% - 288.71px/2 - 68.47px);
+  top: 0px;
+  
+  border: 0.711111px solid #CDCDCD;
+  transform: rotate(90deg);
+}
+.backGround2Ellipse{
+  position: absolute;
+  width: 11.38px;
+  height: 11.38px;
+  left: calc(50% - 11.38px/2 + 71.11px);
+  top: 284.44px;
+  border-radius: 50%;
+  background: #C4C4C4;
+}
+.backGround3Font{
+  z-index: 1;
+  position: absolute;
+  width: 47.64px;
+  height: 14.22px;
+  left: calc(50% - 47.64px/2 + 164.4px);
+  top: 288.58px;
+  
+  font-family: Gmarket Sans;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14.2222px;
+  line-height: 102.3%;
+  /* identical to box height, or 15px */
+  text-align: center;
+  letter-spacing: -0.711112px;
+  
+  color: #CDCDCD;
+  
+  transform: rotate(-90deg);
+}
+.backGround3Rectangle{
+  position: absolute;
+  width: 54.76px;
+  height: 113.78px;
+  left: calc(50% - 54.76px/2 + 165.33px);
+  top: 238.22px;
+  
+  background: #FFFFFF;
+  border: 0.711111px solid #CDCDCD;
+  box-sizing: border-box;
+}
+.backGround3Line{
+  position: absolute;
+  width: 463.22px;
+  height: 0px;
+  left: calc(50% - 238.22px/2 + 53.5px);
+  top: 0px;
+  
+  border: 0.711111px solid #CDCDCD;
+  transform: rotate(90deg);
+}
+.backGround3Ellipse{
+  position: absolute;
+  width: 11.38px;
+  height: 11.38px;
+  left: calc(50% - 11.38px/2 + 165.69px);
+  top: 232.53px;
+  border-radius: 50%;
+  background: #C4C4C4;
+}
+.backGround4Font{
+  z-index: 1;
+  position: absolute;
+  width: 47.64px;
+  height: 14.22px;
+  left: calc(50% - 47.64px/2 + 237.64px);
+  top: 710.98px;
+  font-family: Gmarket Sans;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14.2222px;
+  line-height: 102.3%;
+  /* identical to box height, or 15px */
+  text-align: center;
+  letter-spacing: -0.711112px;
+  
+  color: #CDCDCD;
+  
+  transform: rotate(-90deg);
+}
+.backGround4Rectangle{
+  position: absolute;
+  width: 54.76px;
+  height: 88.18px;
+  left: calc(50% - 54.76px/2 + 239.29px);
+  top: 672.71px;
+  
+  background: #FFFFFF;
+  border: 0.711111px solid #CDCDCD;
+  box-sizing: border-box;
+}
+.backGround4Line{
+  position: absolute;
+  width: 1335px;
+  height: 0px;
+  left: calc(50% - 678.4px/2 - 90.5px);
+  top: 0px;
+  
+  border: 0.711111px solid #CDCDCD;
+  transform: rotate(90deg);
+}
+.backGround4Ellipse{
+  position: absolute;
+  width: 11.38px;
+  height: 11.38px;
+  left: calc(50% - 11.38px/2 + 239.64px);
+  top: 667.02px;
+  border-radius: 50%;
+  background: #C4C4C4;
+}
+.backGround5Font{
+  z-index: 1;
+  position: absolute;
+  width: 47.64px;
+  height: 14.22px;
+  left: calc(50% - 47.64px/2 + 329.96px);
+  top: 834.58px;
+  
+  font-family: Gmarket Sans;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14.2222px;
+  line-height: 102.3%;
+  /* identical to box height, or 15px */
+  text-align: center;
+  letter-spacing: -0.711112px;
+  
+  color: #CDCDCD;
+  
+  transform: rotate(-90deg);
+}
+.backGround5Rectangle{
+  position: absolute;
+  width: 54.76px;
+  height: 86.76px;
+  left: calc(50% - 54.76px/2 + 328.89px);
+  top: 795.73px;
+  
+  background: #FFFFFF;
+  border: 0.711111px solid #CDCDCD;
+  box-sizing: border-box;
+}
+.backGround5Line{
+  position: absolute;
+  width: 1590.73px;
+  height: 0px;
+  left: calc(50% - 795.73px/2 - 68.11px);
+  top: 0px;
+  
+  border: 0.711111px solid #CDCDCD;
+  transform: rotate(90deg);
+}
+.backGround5Ellipse{
+  position: absolute;
+  width: 11.38px;
+  height: 11.38px;
+  left: calc(50% - 11.38px/2 + 329.24px);
+  top: 790.04px;
+  border-radius: 50%;
+  background: #C4C4C4;
+}
+.backGround6Font{
+  z-index: 1;
+  position: absolute;
+  width: 47.64px;
+  height: 14.22px;
+  left: calc(50% - 47.64px/2 + 400.07px);
+  top: 573.73px;
+  
+  font-family: Gmarket Sans;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14.2222px;
+  line-height: 102.3%;
+  /* identical to box height, or 15px */
+  text-align: center;
+  letter-spacing: -0.711112px;
+  
+  color: #CDCDCD;
+  
+  transform: rotate(-90deg);
+}
+.backGround6Rectangle{
+  position: absolute;
+  width: 54.76px;
+  height: 114.49px;
+  left: calc(50% - 54.76px/2 + 400px);
+  top: 522.67px;
+  
+  background: #FFFFFF;
+  border: 0.711111px solid #CDCDCD;
+  box-sizing: border-box;
+}
+.backGround6Line{
+  position: absolute;
+  width: 1030.36px;
+  height: 0px;
+  left: calc(50% - 528.36px/2 + 149.55px);
+  top: 0px;
+  
+  border: 0.711111px solid #CDCDCD;
+  transform: rotate(90deg);
+}
+.backGround6Ellipse{
+  position: absolute;
+  width: 11.38px;
+  height: 11.38px;
+  left: calc(50% - 11.38px/2 + 400.36px);
+  top: 516.98px;
+  border-radius: 50%;
+  background: #C4C4C4;
+}
+.backGround7Font{
+  z-index: 1;
+  position: absolute;
+  width: 47.64px;
+  height: 14.22px;
+  left: calc(50% - 47.64px/2 + 459.09px);
+  top: 272.93px;
+  
+  font-family: Gmarket Sans;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14.2222px;
+  line-height: 102.3%;
+  /* identical to box height, or 15px */
+  text-align: center;
+  letter-spacing: -0.711112px;
+  
+  color: #CDCDCD;
+  
+  transform: rotate(-90deg);
+}
+.backGround7Rectangle{
+  position: absolute;
+  width: 54.76px;
+  height: 79.64px;
+  left: calc(50% - 54.76px/2 + 459.02px);
+  top: 238.93px;
+  
+  background: #FFFFFF;
+  border: 0.711111px solid #CDCDCD;
+  box-sizing: border-box;
+}
+.backGround7Line{
+  position: absolute;
+  width: 468.22px;
+  height: 0px;
+  left: calc(50% - 238.22px/2 + 343.49px);
+  top: 0px;
+  
+  border: 0.711111px solid #CDCDCD;
+  transform: rotate(90deg);
+}
+.backGround7Ellipse{
+  position: absolute;
+  width: 11.38px;
+  height: 11.38px;
+  left: calc(50% - 11.38px/2 + 459.38px);
+  top: 232.53px;
+  border-radius: 50%;
+  background: #C4C4C4;
 }
