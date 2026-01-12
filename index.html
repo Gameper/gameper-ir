@@ -1,100 +1,186 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>gameper</title>
+  <title>톡켓 파트너 센터 - 티켓에서 굿즈까지!</title>
   <link rel="stylesheet" href="css/styles.css" />
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="public/favicon.png" />
 </head>
 
 <body>
-  <div id="stripBg" class="stripBg" style="display: none;">
-    <div class="gradient"></div>
-    <div class="strip red1"></div>
-    <div class="strip green1"></div>
-    <div class="strip purple1"></div>
-    <div class="strip yellow1"></div>
-    <div class="strip red2"></div>
-    <div class="strip green2"></div>
-    <div class="strip purple2"></div>
+  <!-- Logo -->
+  <div class="logo">
+    <img src="images/assets/talket-text-icon.svg" alt="Talket" />
   </div>
-  <div class="pageContainer">
-    <header>
-      <svg width="140" height="22" viewBox="0 0 140 22" fill="none" xmlns="http://www.w3.org/2000/svg"
-        xmlns:xlink="http://www.w3.org/1999/xlink">
-        <rect width="140" height="22" fill="url(#pattern0)" />
-        <defs>
-          <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
-            <use xlink:href="#image0" transform="translate(-0.002574) scale(0.0014157 0.00900901)" />
-          </pattern>
-          <image id="image0" width="710" height="111"
-            xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAsYAAABvCAYAAADv5Aa6AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAABVxJREFUeNrs3f1t4kgYB2DPKQXQQVICHaxTSWghFYRUQAukErwdUALXAR3MjTecTooUboZlwON9HsnKPxay552P364svaErEGPcpD/LjiIhhOcav5vqsTO69eqRxnec65vGXu81vd/eeoZZ+EjreWs9w+2y1UPh/eOi65VjMtSirkWDY7ywnmE2flrPcFt/GQIAABCMAQBAMAYAAMEYAAAEYwAAEIwBAEAwBgAAwRgAAARjAAD4XihsKzx21sntrDV0ZV17WvKYrlXB/UOl5+gLn2Gu9fhxwVjkWHRlLVa36fq7wvu9pOsp896xHfSxofVcWrsS77b4qnOtxCFdH4b3l7fCcTtUWM/qUb92JeZ8Pk8lW72GEPZZd8Z61nOtXHq3PrZnzvVYT2SM+0rvt5vr/KlZO2fMpObazuhWP3PVo93arY1u9WyVfT77lAIAAARjAAAQjAEAQDAGAADBGAAABGMAABCMAQBAMAYAAMEYAADOeCi8f+jy2xYOuT8aY1x1n61I7yqE8Jx566HLbzdb2uKwxLbLb0FcUo9NV9YKuYZ9qsfrtd+tcj1q+ShYd2/3Xs9zN/OuYcvGajE+72YCj5LfbrasVXmtFt1zrwey1VebNB7HGsH4Z3rBdYVxGxd+38pkS2MwFm+dOTH7ikHsIz1LjcCybKweQ25wq1yPWu+3LdgI3yawnueuNwSTsZhIPRYF63ldsJ5/tBSMJ1QPZKuL/9HvUwoAABCMAQBAMAYAAMEYAAAEYwAAEIwBAEAwBgAAwRgAAARjAAA448EQ/KdSq9eFkeWGStrNDoYLAATj7/SGgJZp8QwAl/MpBQAACMYAACAYAwCAYAwAAIIxAAAIxgAAIBgDAIBgDAAAgjEAAJwx9853x3Tt7/wMY0vopanGpWKMq/TnKfP2bQjhUOF3h/S7g2p8jkVjz7vstKbndmdua+ujn3E9Di3VI51J43m0yrz9UTC+zD4d5s93LvS46Hb2S37DS8HmPZw2w2v/bouBsIp77ykX7EG7Trt7brM2xv+Iam19xBnXY5v+bBt65DEYv937IXxKAQAAgjEAAAjGAAAgGAMAgGAMAACCMQAACMYAACAYAwCAYAwAAGfMvfPdU4xxnXtzCGFtSvyy9wzNejl1W8xaH4arXMmeMpV9cMblmEoL4mOl+fPU2NoYn3dll5hMPcazoL/3cxRkq5L1PLa5XwrGlx0IJe0FBePPSfxqFJrlUKrvzRBMZq9qrgXxzOfPk/UxKf1E6rG+9no+hf5djYf1KQUAAAjGAAAgGAMAgGAMAACCMQAACMYAACAYAwCAYAwAAIIxAACc8WAI+CrGOLZZXNz5MY6nLjgA3+1V1drCAoIx/GvT3b+/+tC11+oVuK0xFO8MA3AtPqUAAADBGAAABGMAABCMAQBAMAYAAMEYAAAEYwAAEIwBAEAwBgCAM0o73z3GGPvMew8hhENLg1Hwbl16t8H0AQD4c4Px6nTleE/XOjNkrnPvrRyKS1qLBtMH/jxpv5rt2k/74LgH9qrMhWtjmPPZmNZHVOX58ykFAAAIxgAAIBgDAIBgDAAAgjEAAAjGAAAgGAMAgGAMAACCMQAACMYAAHBeOLVCzrVJ19KwATBzz409r/MZruDh1Ns8SwrRR0MGwNyVnI1T4HyG6/ApBQAACMYAACAYAwCAYAwAAIIxAAAIxgAAIBgDAIBgDAAAgjEAAFwrGIcQnkOmdPtgePnivWD+vBuuSdXDeoYJKzyf7a/8jqFgrrXWWt3/GAMAgGAMAACCMQAACMYAACAYAwCAYAwAAIIxAAAIxgAAIBgDAIBgDAAA/+MfAQYA2SwlWGSp2/8AAAAASUVORK5CYII=" />
-        </defs>
-      </svg>
-    </header>
 
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-background">
+      <img src="images/assets/festival-1.png" alt="Festival" class="hero-image" />
+      <div class="hero-overlay"></div>
+    </div>
+    
+    <div class="hero-content">
+      <!-- <div class="hero-badge">
+        <img src="images/assets/sprout.png" alt="Sprout" class="sprout-icon" />
+        <span>파트너센터</span>
+      </div> -->
+      
+      <h1 class="hero-title">
+        티켓팅과 굿즈 판매를 한 번에,<br/>
+        이벤트가 훨씬 쉬워집니다
+      </h1>
+      
+      <p class="hero-subtitle">
+        대학 축제, 동아리 공연, 스포츠 이벤트, 팬밋업까지<br/>
+        다양한 행사를 온라인에서 간편하게 판매하세요.<br/>
+        낮은 수수료로 부담 없이 시작하고, 굿즈 판매로 수익을 더해보세요.
+      </p>
+      
+      <!-- <div class="feature-tags">
+        <div class="tags-row">
+          <span class="tag">지정좌석 티켓팅</span>
+          <span class="tag">선예매 기능</span>
+          <span class="tag">주점 예약</span>
+          <span class="tag">선착순 티켓 넘버링</span>
+          <span class="tag">부정입장 방지 QR코드</span>
+          <span class="tag">무료 QR 스캐너</span>
+          <span class="tag">커뮤니티 멤버 전용 구매/할인</span>
+        </div>
+        <div class="tags-row">
+          <span class="tag">대학 전산팀 연계</span>
+          <span class="tag">굿즈 제작/판매</span>
+          <span class="tag">현장 카드단말기 대여</span>
+          <span class="tag">쿠폰 커스터마이징</span>
+          <span class="tag">프랜차이즈 모바일쿠폰 연동</span>
+          <span class="tag">사업자/개인판매자 입점</span>
+        </div>
+      </div> -->
+    </div>
+  </section>
 
-    <div class="content">
-      <div class="heroContainer">
-        <h2 class="light">Blockchain based payment system</h2>
-        <h1>We give power to your digital assets</h1>
-      </div>
-      <div class="investorContainer">
-        <span>Investors</span>
-        <span><img src="images/strong-ventures-logo-white-04.svg" alt="" /></span>
+  <!-- Event Recommendation Section -->
+  <section class="events-section">
+    <h2 class="section-title">이런 이벤트에 추천해요</h2>
+    <p class="section-subtitle">이벤트 스토어를 운영한 '톡켓 파트너'의 한 마디</p>
+    
+    <div class="category-slider">
+      <div class="category-track">
+        <div class="category-card">
+          <img src="images/assets/category-festival.png" alt="Festival" />
+        </div>
+        <div class="category-card">
+          <img src="images/assets/category-band.png" alt="Band" />
+        </div>
+        <div class="category-card">
+          <img src="images/assets/category-dance.png" alt="Dance" />
+        </div>
+        <div class="category-card">
+          <img src="images/assets/category-sports.png" alt="Sports" />
+        </div>
+        <div class="category-card">
+          <img src="images/assets/category-festival.png" alt="Festival" />
+        </div>
+        <div class="category-card">
+          <img src="images/assets/category-band.png" alt="Band" />
+        </div>
+        <div class="category-card">
+          <img src="images/assets/category-dance.png" alt="Dance" />
+        </div>
+        <div class="category-card">
+          <img src="images/assets/category-sports.png" alt="Sports" />
+        </div>
       </div>
     </div>
+  </section>
 
+  <!-- Features Section -->
+  <section class="features-section">
+    <div class="feature-card">
+      <div class="feature-text">
+        <h3>온라인 예매와 현장 결제단말기 지원</h3>
+        <p>카드, 계좌이체, 애플페이, 삼성페이 등 다양한 결제 수단으로 더 쉽게 티켓을 판매하세요.</p>
+      </div>
+      <div class="feature-image">
+        <img src="images/assets/feature1.png" alt="Payment Feature" />
+      </div>
+    </div>
+    
+    <div class="feature-card reverse">
+      <div class="feature-text">
+        <h3>모바일티켓 입장 QR로 빠르게</h3>
+        <p>추가 장비 구매 없이 나의 모바일 기기를 스캐너로 사용할 수 있어요.</p>
+      </div>
+      <div class="feature-image">
+        <img src="images/assets/feature2.png" alt="QR Feature" />
+      </div>
+    </div>
+    
+    <div class="feature-card">
+      <div class="feature-text">
+        <h3>매출을 올려줄 굿즈 판매</h3>
+        <p>프리오더, 현장픽업, 배송 등 행사 특성에 맞게 상품을 판매하세요.</p>
+      </div>
+      <div class="feature-image">
+        <img src="images/assets/feature3.png" alt="Goods Feature" />
+      </div>
+    </div>
+  </section>
 
-    <footer>
-      <span class="address">
-        (주)겜퍼 서울특별시 강남구 테헤란로 313, 913호(역삼동, 성지하이츠1)
-      </span>
-      <span class="contact"><a href="mailto:info@gameper.io">info@gameper.io</a></span>
-      <span class="contact"><a href="https://www.notion.so/V1-2-81089baac95c45638793832a1eafa030">개인정보처리방침</a></span>
-      <span>
-        <a class="snsLinks" href="https://www.facebook.com/%EA%B2%9C%ED%8D%BC-2178994162345350/" target="_blank">
-          <svg class="fb" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M20.4844 3.51562C18.1406 1.17186 15.3125 0 12 0C8.68748 0 5.85939 1.17186 3.51562 3.51562C1.17186 5.85939 0 8.68748 0 12C0 15.3125 1.17186 18.1406 3.51562 20.4844C5.85939 22.8281 8.68748 24 12 24C15.3125 24 18.1406 22.8281 20.4844 20.4844C22.8281 18.1406 24 15.3125 24 12C24 8.68748 22.8281 5.85939 20.4844 3.51562ZM15.0938 12H13.125V19.2188H10.4531V12H8.625V9.51562H10.4531V8.0625C10.4531 6.96874 10.6562 6.14844 11.0625 5.60156C11.4688 5.05468 12.2344 4.78125 13.3594 4.78125H15.3281V7.26562H14.1094C13.6719 7.26562 13.3984 7.34375 13.2891 7.5C13.1797 7.65625 13.125 7.92187 13.125 8.29688V9.51562H15.375L15.0938 12Z"
-              fill="white" />
-          </svg>
+  <!-- Sponsorship Section -->
+  <section class="sponsor-section">
+    <div class="sponsor-content">
+      <h3>편리한 온라인 판매는 물론 <br/>협찬사 섭외까지</h3>
+    </div>
+    
+    <div class="sponsor-benefits">
+      <h3>성공적인 이벤트를 위한 톡켓 파트너만의 혜택!</h3>
+      <p>다양한 협찬 레퍼런스를 통해<br/>행사에 딱 맞는 협찬사를 함께 찾아드려요</p>
+    </div>
+  </section>
 
-        </a>
-        <a class="snsLinks yt" href="https://www.youtube.com/channel/UCvF95zGgUlY2G6Lkb1GO-fw" target="_blank">
-          <svg class="yt" width="24" height="17" viewBox="0 0 24 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <g clip-path="url(#clip0)">
-              <path
-                d="M20.7422 0.328127C14.2422 -0.109376 8.39846 -0.109376 3.21094 0.328127C2.39843 0.421877 1.71094 0.874998 1.14844 1.6875C0.585936 2.50001 0.257814 3.34375 0.164063 4.21875C-0.0546878 7.09377 -0.0546878 9.96874 0.164063 12.8438C0.257814 13.7188 0.585936 14.5625 1.14844 15.375C1.71094 16.1875 2.39843 16.6563 3.21094 16.7813C9.52347 17.1875 15.3672 17.1875 20.7422 16.7813C21.5547 16.625 22.2422 16.1406 22.8047 15.3281C23.3672 14.5156 23.6953 13.6875 23.7891 12.8438C24.0078 9.90624 24.0078 6.95314 23.7891 3.98438C23.6953 3.07812 23.3906 2.25001 22.875 1.5C22.3594 0.749998 21.6484 0.359377 20.7422 0.328127ZM8.97656 12.7969V4.17188L16.4766 8.48438L8.97656 12.7969Z"
-                fill="white" />
-            </g>
-            <defs>
-              <clipPath id="clip0">
-                <rect width="23.625" height="16.5" fill="white" />
-              </clipPath>
-            </defs>
-          </svg>
+  <!-- App Download Section -->
+  <section class="app-section">
+    <div class="app-content">
+      <div class="app-title">
+        <span>티켓팅 · 굿즈판매 · 협찬섭외</span>
+        <span>톡켓 하나로 다 되니까</span>
+      </div>
+    </div>
+  </section>
 
-        </a>
-      </span>
-    </footer>
-  </div>
-
-  <script>
-    document.getElementById("stripBg").style.display = 'block'
-    TweenMax.staggerFrom(".strip", 1, {
-      width: "0%",
-      delay: "0.5",
-      // transform: "translate3d(1000px,0,0)",
-      ease: Power2.easeOut
-    });
-    TweenMax.from(".gradient", 0.5, {
-      delay: "1",
-      opacity: "0"
-    });
-  </script>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-column">
+        <h4>앱 다운로드</h4>
+        <a href="https://play.google.com/store/apps/details?id=com.gameper.butterapp&hl=ko" class="footer-link">Google Play</a>
+        <a href="https://apps.apple.com/kr/app/%ED%86%A1%EC%BC%93-talket/id1611117426" class="footer-link">App Store</a>
+      </div>
+      
+      <div class="footer-column">
+        <h4>소식</h4>
+        <a href="https://www.instagram.com/talket_official" class="footer-link">인스타그램</a>
+        <a href="https://blog.naver.com/talket" class="footer-link">블로그</a>
+      </div>
+      
+      <div class="footer-column">
+        <h4>고객 지원</h4>
+        <a href="https://pf.kakao.com/_xckeLb" class="footer-link">카카오톡 채널</a>
+        <a href="https://partner.talket.io/contact" class="footer-link">입점 문의</a>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>주식회사 겜퍼 | 대표자 이준섭 | 사업자등록번호: 249-88-01183 | 통신판매업 신고번호: 제 2019-서울강남-00721호 | 서울특별시 강남구 테헤란로 313, 성지하이츠 913호</p>
+      <p>Copyright © Gameper. All rights reserved.</p>
+    </div>
+  </footer>
 </body>
 
 </html>
